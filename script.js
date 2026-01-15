@@ -1,3 +1,4 @@
+// Cursor glow
 const cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", e => {
@@ -5,7 +6,7 @@ document.addEventListener("mousemove", e => {
   cursor.style.top = e.clientY + "px";
 });
 
-/* Scroll reveal */
+// Scroll reveal
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
@@ -16,7 +17,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.2 }
+  { threshold: 0.15 }
 );
 
 reveals.forEach(el => observer.observe(el));
